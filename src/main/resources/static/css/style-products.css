@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+nav {
+    flex: 1;
+    text-align: left;
+    margin-left: 40px;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+.small-container .col-4 p {
+    color: black;
+
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.row h1 {
+    color: white;
+}
+
+.cart-icon {
+    color: white;
+}
+
+.menu-icon {
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+
+}
+
+.col-2 img {
+    max-width: 100%;
+    padding: 50px 0;
+
+}
+
+.col-2 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+
+}
+
+.header {
+    background: rgb(190, 28, 218);
+    background: radial-gradient(circle, rgba(190, 28, 218, 0.6054796918767507) 35%, rgba(61, 43, 50, 1) 100%);
+}
+
+.header .row {
+    margin-top: 70px;
+
+}
+
+.categories {
+    margin: 70px 0;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.col-3 img {
+    width: 100%;
+}
+
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.col-4 {
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+
+.col-4 img {
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+
+.title::after {
+    content: "";
+    background: rgb(190, 28, 218);
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+h4 {
+    color: #555;
+    font-weight: normal;
+}
+
+.col-4 p {
+    font-size: 14px;
+
+}
+
+.col-4:hover {
+    transform: translateY(-5px);
+}
+
+
+.footer {
+    background: black;
+    color: white;
+    font-size: 14px;
+    padding: 60px 0 20px;
+
+}
+
+.footer p {
+    color: white;
+}
+
+.footer h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer .haunted-logo-footer {
+    width: 180px;
+    margin-bottom: 20px;
+
+}
+
+.footer-col-2, .footer-col-3, .footer-col-4 {
+    min-width: 100%;
+    margin-bottom: 10px;
+
+
+}
+
+
+.footer-col-2 {
+    flex: 1;
+    text-align: center;
+}
+
+
+.footer-col-3 {
+    flex-basis: 12%;
+    text-align: center;
+}
+
+.footer-col-4 {
+    flex-basis: 12%;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.app-logo {
+    margin-top: 20px;
+}
+
+.app-logo img {
+    width: 140px;
+}
+
+.footer hr {
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: center;
+}
+
+/*----- All products ---->*/
+
+.row-2{
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+
+select{
+    border: 1px solid #f5c2c7;
+    padding: 5px;
+
+}
+select:focus{
+    outline: none;
+}
+
+.page-btn{
+    margin: 0 auto 80px;
+
+}
+
+.page-btn span{
+    display: inline-block;
+    border: 1px solid #f5c2c7;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.page-btn span:hover{
+    background: #f5c2c7;
+    color: white;
+
+}
+
+/*----- media query for menu ---->*/
+
+@media only screen and (max-width: 800px) {
+
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    nav ul li a {
+        color: #fff;
+
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+
+    }
+
+
+
+
+    /*----- media query for less than 600 screen size ---->*/
+    @media only screen and (max-width: 600px) {
+        .row {
+            text-align: center;
+
+        }
+
+        .col-2, .col-3, .col-4 {
+            flex-basis: 100%;
+
+        }
+
+    }
+}
+

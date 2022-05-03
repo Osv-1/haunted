@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org" xmlns:score="http://thymeleafexamples">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product detail - Haunted | Website</title>
+    <link rel="stylesheet" th:href="@{css/style-product-detail.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="shortcut icon" th:href="@{images/haunted_logo.ico}" type="image/x-icon">
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"> <img th:src="@{images/haunted_logo.png}" width="125px"> </a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Produtos</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Contato</a></li>
+                    <li><a href="account.html">Conta</a></li>
+                </ul>
+            </nav>
+            <img th:src="@{images/cart.png}" width="30px" height="30px" class="cart-icon">
+            <img th:src="@{images/menu.png}" class="menu-icon"
+                 onclick="menutoggle()">
+        </div>
+    </div>
+</div>
+
+<!----- single product details ---->
+
+<div class="small-container single-product">
+    <div class="row">
+        <div class="col-2">
+            <img class="principal-product" th:src="@{images/peita-1.png}" width="100%" id="ProductImg">
+            <div class="small-img-row">
+                <div class="small-img-col">
+                    <img th:src="@{images/peita-1.png}" width="100%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                    <img th:src="@{images/peita-1-costas.png}" width="100%" class="small-img">
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <p>Home / T-shirt</p>
+            <h1>T-shirt Take a ride</h1>
+            <h4>R$90,00</h4>
+            <select>
+                <option>Select Size</option>
+                <option>XXL</option>
+                <option>XL</option>
+                <option>L</option>
+                <option>M</option>
+                <option>P</option>
+            </select>
+            <input type="number" value="1">
+            <a href="" class="btn">Add to cart</a>
+            <h3>Product Details</h3>
+            <p>Camiseta feita em 100% algodão</p>
+        </div>
+    </div>
+</div>
+
+
+<!----- js for toggle menu ---->
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+
+            MenuItems.style.maxHeight = "200px";
+        } else {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+
+</script>
+
+
+<!----- js for product gallery ---->
+<script>
+    var ProductImg = document.getElementById("ProductImg");
+    var SmallImg = document.getElementsByClassName("small-img")
+    SmallImg[0].onclick = function () {
+        ProductImg.src = SmallImg[0].src;
+    }
+    SmallImg[1].onclick = function () {
+        ProductImg.src = SmallImg[1].src;
+    }
+    SmallImg[2].onclick = function () {
+        ProductImg.src = SmallImg[2].src;
+    }
+    SmallImg[3].onclick = function () {
+        ProductImg.src = SmallImg[3].src;
+    }
+
+
+</script>
+
+</body>
+</html>

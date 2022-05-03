@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org" xmlns:score="http://thymeleafexamples">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Haunted | Website</title>
+    <link rel="stylesheet" th:href="@{css/style.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="shortcut icon" th:href="@{images/haunted_logo.ico}" type="image/x-icon">
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"> <img th:src="@{images/haunted_logo.png}" width="125px"> </a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Produtos</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Contato</a></li>
+                    <li><a href="account.html">Conta</a></li>
+
+                </ul>
+            </nav>
+            <a href="cart.html"> <img th:src="@{images/cart.png}" width="30px" height="30px" class="cart-icon"> </a>
+            <img th:src="@{images/menu.png}" class="menu-icon"
+                 onclick="menutoggle()">
+        </div>
+
+
+        <div class="row">
+            <div class="col-2">
+                <h1>A HAUNTED one <br> no more nightmares</h1>
+                <p>Uma marca voltada ao streetwear.<br> Criada com foco
+                    no mundo dos skatistas e na cena nacional</p>
+                <a href="products.html" class="btn">Explore now &#8594;</a>
+            </div>
+            <div class="col-2">
+                <img th:src="@{images/haunted_logo.png}">
+            </div>
+        </div>
+    </div>
+
+    <!----- Drop 1 ---->
+    <div class="small-container">
+        <h2 class="title title-product">Featured products</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="product-detail.html"> <img th:src="@{images/peita-1.png}"></a>
+                <a href="product-detail.html"><h4>T-shirt Friends</h4></a>
+                <p>R$90,00</p>
+            </div>
+            <div class="col-4">
+                <img th:src="@{images/peita-offwhite-haunted.png}" width="80%">
+                <h4>T-shirt Haunted</h4>
+                <p>R$80,00</p>
+            </div>
+            <div class="col-4">
+                <img th:src="@{images/peita-preta-haunted.png}" width="80%">
+                <h4>T-shirt metallic haunted</h4>
+                <p>R$90,00</p>
+            </div>
+            <div class="col-4">
+                <img th:src="@{images/peita-1-costas.png}" width="80%">
+                <h4>T-shirt kombi</h4>
+                <p>R$100,00</p>
+            </div>
+        </div>
+        <h2 class="title">Lastest Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img th:src="@{images/product-5.jpg}">
+                <h4>Tenis cano alto</h4>
+                <p>R$300,00</p>
+            </div>
+            <div class="col-4">
+                <img th:src="@{images/product-6.jpg}">
+                <h4>Camiseta puma</h4>
+                <p>R$120,00</p>
+            </div>
+            <div class="col-4">
+                <img th:src="@{images/product-7.jpg}">
+                <h4>Meia conjunto</h4>
+                <p>R$40,00</p>
+            </div>
+            <div class="col-4">
+                <img th:src="@{images/product-8.jpg}">
+                <h4>Relogio fossil</h4>
+                <p>R$450,00</p>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img th:src="@{images/product-9.jpg}">
+                    <h4>Camiseta cannister</h4>
+                    <p>R$500,00</p>
+                </div>
+                <div class="col-4">
+                    <img th:src="@{images/product-10.jpg}">
+                    <h4>Tenis hrx vermelho</h4>
+                    <p>R$160,00</p>
+                </div>
+                <div class="col-4">
+                    <img th:src="@{images/product-11.jpg}">
+                    <h4>Tenis basico</h4>
+                    <p>R$130,00</p>
+                </div>
+                <div class="col-4">
+                    <img th:src="@{images/product-12.jpg}">
+                    <h4>Caalça nike</h4>
+                    <p>R$170,00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----- swiper camisetas---->
+
+    <div class="container-swiper">
+
+        <div class="swiper">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide"><img th:src="@{images/peita-1.png}" data-swiper-parallax="500"></div>
+                <div class="swiper-slide"><img th:src="@{images/peita-preta-haunted.png}" data-swiper-parallax="500">
+                </div>
+                <div class="swiper-slide"><img th:src="@{images/peita-offwhite-haunted.png}" data-swiper-parallax="500">
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+
+    <!----- offer ---->
+
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img th:src="@{images/peita-1.png}" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <p>Conteudo exclusivo somente na HAUNTED</p>
+                    <h1>T-shirt Friends</h1>
+                    <small>Camiseta feita 100% algodão. First drop exclusive, apenas 25 unidades</small>
+
+                    <a href="" class="btn">Buy Now &#8594</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!----- footer ---->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-2">
+                <img th:src="@{images/haunted_logo.png}" class="haunted-logo-footer">
+                <p>Nosso proposito é a sustentabilidade e acessibilidade para todo o mundo</p>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li>Instagram</li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2022 - Haunted Company</p>
+    </div>
+</div>
+
+
+<!----- js for toggle menu ---->
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle() {
+        if (MenuItems.style.maxHeight === "0px") {
+
+            MenuItems.style.maxHeight = "200px";
+        } else {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+
+</script>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        loop: true,
+
+    });
+</script>
+</body>
+</html>
