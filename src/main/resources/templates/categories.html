@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Haunted® | Categories</title>
+    <link rel="stylesheet" th:href="@{../css/style.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="shortcut icon" th:href="@{../images/haunted_logo.ico}" type="image/x-icon">
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="/"> <img th:src="@{../images/haunted_logo.png}" width="125px"> </a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Produtos</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="/account">Conta</a></li>
+                    <li><a href="/account">Logout</a></li>
+                </ul>
+            </nav>
+            <a href="/cart"> <img th:src="@{../images/cart.png}" width="30px" height="30px" class="cart-icon"> </a>
+            <img th:src="@{images/menu.png}" class="menu-icon"
+                 onclick="menutoggle()">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <a href="/admin/categories/add" class="btn btn-add">Add Category</a>
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th scope="col">SN</th>
+            <th scope="col">Category Name</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Update</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div class="container">
+    <tr th:each="category, iStat: ${categories}">
+        <th scope="row" th:text="${iStat.index + 1}">1</th>
+        <td th:text="${category.name}">Larry</td>
+        <td><a href="/admin/categories/delete/{id}(id=${category.id})" class="btn"></a></td>
+        <td><a href="/admin/categories/update/{id}(id=${category.id})" class="btn"></a></td>
+    </tr>
+</div>
+
+</body>
+</html>
+
